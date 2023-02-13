@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <head>
+        <title>Web App – Simple Interest Calculator</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Simple Interest Calculator</h1>
+            <div class="contents">
+                <table id="table" style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td class="labels">Amount </td>
+                            <td>
+                                <input type="number" id="principalamt" class="principal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labels">Interest Rate </td>
+                            <td>
+                                <input type="range" min="1" max="20" step="0.25" value="10.25" id="rate" name="rate" onchange="ProgressValue()"> 
+                                <span id="rate_display">10.25</span><span>%</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labels">No. of Years</td>
+                            <td>
+                                <select name="years" id="years">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+               <span style="color:rgb(60, 165, 214);" >Simple Interest</span>
+                <button id="compute" onclick="calculate()">Compute Interest</button> <br>
+                <span id="result">
+                </span><br>
+                <span style="color: rgb(60, 165, 214);">Compound Interest</span>
+                <button id="compute" onclick="calculateCompoundInterest()">Compute Interest</button> <br>
+                <span id="result1">
+                </span>
+            </div>
+            <div class="footer"> &copy; Everyone Can Get Rich</div> 
+        </div>
+        
+    </body>
+</html>
